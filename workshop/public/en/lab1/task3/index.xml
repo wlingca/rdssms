@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Verify lab environment on RDS MySQL Immersion Day Labs</title>
+    <link>/en/lab1/task3.html</link>
+    <description>Recent content in Verify lab environment on RDS MySQL Immersion Day Labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 21 Apr 2020 21:18:20 -0500</lastBuildDate>
+    
+	<atom:link href="/en/lab1/task3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

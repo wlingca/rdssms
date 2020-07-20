@@ -1,0 +1,80 @@
+[
+	{	"pageTitle": "Index",
+		"relativePagePath": "/en/"
+	},    
+	{
+		"pageTitle": "Lab1 - Prerequisites",
+		"relativePagePath": "/en/lab1.html"
+	},
+	{
+		"pageTitle": "Signing into the AWS Management console",
+		"relativePagePath": "/en/lab1/1_signin.html"
+	},
+	{
+		"pageTitle": "Create Key Pair",
+		"relativePagePath": "/en/lab1/2_keypair.html"
+	},
+	{
+		"pageTitle": "Creating a lab environment using AWS CloudFormation",
+		"relativePagePath": "/en/lab1/3_createlab.html"
+	},
+	{
+		"pageTitle": "Verify lab environment",
+		"relativePagePath": "/en/lab1/4_verifylab.html"
+	},
+	{
+		"pageTitle": "Lab2 - Create a new RDS SQL Server",
+		"relativePagePath": "/en/lab2.html"
+	},
+	{
+		"pageTitle": "Create the DB Instance",
+		"relativePagePath": "/en/lab2/1_createdatabase.html"
+	},
+	{
+		"pageTitle": "Retrieve Database Instance Endpoint",
+		"relativePagePath": "/en/lab2/2_endpoint.html"
+	},
+	{
+		"pageTitle": "Connect to SQL Server using SSMS",
+		"relativePagePath": "/en/lab2/clientconnection.html"
+	},
+	{
+		"pageTitle": "Lab 3 - High Availability",
+		"relativePagePath": "/en/lab3.html"
+	},
+	{
+		"pageTitle": "Shortcodes",
+		"relativePagePath": "/en/shortcodes.html"
+	},
+	{
+		"pageTitle": "Attachments",
+		"relativePagePath": "/en/shortcodes/attachments.html"
+	},
+	{
+		"pageTitle": "Button",
+		"relativePagePath": "/en/shortcodes/button.html"
+	},
+	{
+		"pageTitle": "Children",
+		"relativePagePath": "/en/shortcodes/children.html"
+	},    
+	{
+		"pageTitle": "Expand",
+		"relativePagePath": "/en/shortcodes/expand.html"
+	},
+	{
+		"pageTitle": "Image",
+		"relativePagePath": "/en/shortcodes/img.html"
+	},
+	{
+		"pageTitle": "Notice",
+		"relativePagePath": "/en/shortcodes/notice.html"
+	},
+	{
+		"pageTitle": "Site param",
+		"relativePagePath": "/en/shortcodes/siteparam.html"
+	},
+	{
+		"pageTitle": "Site URL",
+		"relativePagePath": "/en/shortcodes/siteurl.html"
+	}]

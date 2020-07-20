@@ -1,0 +1,344 @@
+    # Usage:
+    #   aws cloudformation --region <region> create-stack --stack-name <stack name> --template-body file://cft-rdsSQL.yaml
+    
+    # This template will:
+    #   Create a VPC with:
+    #       2 Public Subnets
+    #       2 Private Subnets
+    #   An Internet Gateway (with routes to it for Public Subnets)
+    #   A NAT Gateway for outbound access (with routes from Private Subnets set to use it)
+    #   A Security Group for applications
+    #   A Security Group for RDS SQL Server
+    #     
+    Parameters:
+      WinKeyName:
+        Description: Name of an existing EC2 KeyPair to enable RDP access to the instance
+        Type: AWS::EC2::KeyPair::KeyName
+        Default: "sqlimmersion-stack"
+        ConstraintDescription: must be the name of an existing EC2 KeyPair.
+      DomainAdminPassword:
+        Description: Password for Windows domain administrator user
+        Type: String
+        Default: "Amazon1!"
+        AllowedPattern: (?=^.{8,64}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9\s])(?=.*[a-z])|(?=.*[^A-Za-z0-9\s])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9\s]))^.*
+      LatestAmiId:
+        Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+        Default: '/aws/service/ami-windows-latest/Windows_Server-2019-English-Full-SQL_2017_Express'
+
+
+    Resources:
+      PubPrivateVPC:
+        Type: 'AWS::EC2::VPC'
+        Properties:
+          CidrBlock: 10.32.0.0/16
+          EnableDnsSupport: 'true'
+          EnableDnsHostnames: 'true'
+          Tags:
+            - Key: Name
+              Value: !Sub ${AWS::StackName}-vpcRDSSQL
+     
+      PublicSubnet1:
+        Type: 'AWS::EC2::Subnet'
+        Properties:
+          VpcId: !Ref PubPrivateVPC
+          AvailabilityZone: !Select [0, !GetAZs ]
+          CidrBlock: 10.32.1.0/24
+          MapPublicIpOnLaunch: true
+          Tags:
+            - Key: Name
+              Value: !Sub ${AWS::StackName}-snRDSSQLPublic1
+
+     
+      PublicSubnet2:
+        Type: 'AWS::EC2::Subnet'
+        Properties:
+          VpcId: !Ref PubPrivateVPC
+          AvailabilityZone: !Select [1, !GetAZs ]
+          CidrBlock: 10.32.2.0/24
+          MapPublicIpOnLaunch: true
+          Tags:
+            - Key: Name
+              Value: !Sub ${AWS::StackName}-snRDSSQLPublic2
+
+     
+      PrivateSubnet1:
+        Type: 'AWS::EC2::Subnet'
+        Properties:
+          VpcId: !Ref PubPrivateVPC
+          AvailabilityZone: !Select [0, !GetAZs ]
+          CidrBlock: 10.32.3.0/24
+          MapPublicIpOnLaunch: false
+          Tags:
+            - Key: Name
+              Value: !Sub ${AWS::StackName}-snRDSSQLPrivate1
+    
+      PrivateSubnet2:
+        Type: 'AWS::EC2::Subnet'
+        Properties:
+          VpcId: !Ref PubPrivateVPC
+          AvailabilityZone: !Select [1, !GetAZs ]
+          CidrBlock: 10.32.4.0/24
+          MapPublicIpOnLaunch: false
+          Tags:
+            - Key: Name
+              Value: !Sub ${AWS::StackName}-snRDSSQLPrivate2      
+      
+      InternetGateway:
+        Type: 'AWS::EC2::InternetGateway'
+        Properties:
+          Tags:
+            - Key: Name
+              Value: igwRDSSQL
+            - Key: Network
+              Value: Public
+      
+      GatewayToInternet:
+        Type: 'AWS::EC2::VPCGatewayAttachment'
+        Properties:
+          VpcId: !Ref PubPrivateVPC
+          InternetGatewayId: !Ref InternetGateway
+      
+      PublicRouteTable:
+        Type: 'AWS::EC2::RouteTable'
+        Properties:
+          VpcId: !Ref PubPrivateVPC
+          Tags:
+            - Key: Network
+              Value: Public
+            - Key: Name
+              Value: !Sub ${AWS::StackName}-rtblRDSSQLPublic
+  
+      PublicRoute:
+        Type: 'AWS::EC2::Route'
+        DependsOn: GatewayToInternet
+        Properties:
+          RouteTableId: !Ref PublicRouteTable
+          DestinationCidrBlock: 0.0.0.0/0
+          GatewayId: !Ref InternetGateway
+     
+      PublicSubnet1RouteTableAssociation:
+        Type: 'AWS::EC2::SubnetRouteTableAssociation'
+        Properties:
+          SubnetId: !Ref PublicSubnet1
+          RouteTableId: !Ref PublicRouteTable
+     
+      PublicSubnet2RouteTableAssociation:
+        Type: 'AWS::EC2::SubnetRouteTableAssociation'
+        Properties:
+          SubnetId: !Ref PublicSubnet2
+          RouteTableId: !Ref PublicRouteTable
+     
+      NatGateway:
+        Type: "AWS::EC2::NatGateway"
+        DependsOn: NatPublicIP
+        Properties: 
+          AllocationId: !GetAtt NatPublicIP.AllocationId
+          SubnetId: !Ref PublicSubnet1
+          Tags:
+            - Key: Name
+              Value: !Sub ${AWS::StackName}-ngwRDSSQL
+     
+      NatPublicIP:
+        Type: "AWS::EC2::EIP"
+        DependsOn: PubPrivateVPC
+        Properties:
+          Domain: vpc
+     
+      PrivateRouteTable:
+        Type: 'AWS::EC2::RouteTable'
+        Properties:
+          VpcId: !Ref PubPrivateVPC
+          Tags:
+            - Key: Network
+              Value: Private
+            - Key: Name
+              Value: !Sub ${AWS::StackName}-rtblRDSSQLPrivate
+        
+      PrivateRoute:
+        Type: 'AWS::EC2::Route'
+        Properties:
+          RouteTableId: !Ref PrivateRouteTable
+          DestinationCidrBlock: 0.0.0.0/0
+          NatGatewayId: !Ref NatGateway
+     
+      PrivateSubnet1RouteTableAssociation:
+        Type: 'AWS::EC2::SubnetRouteTableAssociation'
+        Properties:
+          SubnetId: !Ref PrivateSubnet1
+          RouteTableId: !Ref PrivateRouteTable
+     
+      PrivateSubnet2RouteTableAssociation:
+        Type: 'AWS::EC2::SubnetRouteTableAssociation'
+        Properties:
+          SubnetId: !Ref PrivateSubnet2
+          RouteTableId: !Ref PrivateRouteTable
+
+## Create DB subnet group
+      DBSubnetGroup:
+        Type: AWS::RDS::DBSubnetGroup
+        Properties:
+          DBSubnetGroupDescription: !Sub Subnet Group for ${AWS::StackName}
+          SubnetIds: [ !Ref PrivateSubnet1, !Ref PrivateSubnet2]
+          Tags:
+            - Key: Name
+              Value: !Sub ${AWS::StackName}-dbsubnetgroup 
+
+
+      PublicSecGroup:
+        Type: 'AWS::EC2::SecurityGroup'
+        Properties:
+          VpcId: !Ref PubPrivateVPC
+          GroupDescription: allow connections from specified CIDR ranges
+          Tags:
+            - Key: Name
+              Value: sgRDSApp               
+          SecurityGroupIngress:
+          - IpProtocol: tcp
+            FromPort: 80
+            ToPort: 80
+            CidrIp: 0.0.0.0/0
+          - IpProtocol: tcp
+            FromPort: 3389
+            ToPort: 3389
+            CidrIp: 0.0.0.0/0 
+            Description: Allows RDP access   
+
+           
+      SQLSecGroup:
+        Type: 'AWS::EC2::SecurityGroup'
+        Properties:
+          VpcId: !Ref PubPrivateVPC
+          GroupDescription: Allow connect to SQL Server
+          Tags:
+          - Key: Name
+            Value: !Sub ${AWS::StackName}-SQLSecGroup
+          SecurityGroupIngress:
+          - IpProtocol: tcp
+            FromPort: 1433
+            ToPort: 1433
+            SourceSecurityGroupId: !Ref PublicSecGroup
+            Description: Allows SQL Server access from app
+      ruleDbSecGroupClusterIngressSelf:
+        Type: 'AWS::EC2::SecurityGroupIngress'
+        Properties:
+          GroupId: !Ref SQLSecGroup
+          IpProtocol: -1
+          SourceSecurityGroupId: !Ref SQLSecGroup
+
+      EC2AdJoinRole:
+        Type: 'AWS::IAM::Role'
+        Properties:
+          AssumeRolePolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Principal:
+                  Service:
+                    - ec2.amazonaws.com
+                Action:
+                  - 'sts:AssumeRole'
+          Path: /
+          ManagedPolicyArns:
+            - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore            
+            - arn:aws:iam::aws:policy/AmazonSSMDirectoryServiceAccess
+
+      bastionInstanceProfile: 
+        Type: "AWS::IAM::InstanceProfile"
+        Properties: 
+          Path: "/"
+          Roles: 
+            - Ref: EC2AdJoinRole
+
+      sqlAD: 
+        Type: AWS::DirectoryService::MicrosoftAD
+        Properties: 
+          Name: "rdssql.rds.com"
+          Password: !Ref DomainAdminPassword
+          ShortName: "rdssql"
+          Edition: Standard
+          VpcSettings: 
+            SubnetIds: 
+              - Ref: PrivateSubnet1
+              - Ref: PrivateSubnet2
+            VpcId: 
+              Ref: PubPrivateVPC
+
+      document: 
+        Type: AWS::SSM::Document
+        Properties:
+          Content:
+            schemaVersion: '1.2'
+            description: Join instances to an AWS Directory Service domain.
+            parameters:
+              directoryId:
+                type: String
+                description: "(Required) The ID of the AWS Directory Service directory."
+              directoryName:
+                type: String
+                description: "(Required) The name of the directory. For example, test.example.com"
+              dnsIpAddresses:
+                type: StringList
+                default: []
+                description: "(Optional) The IP addresses of the DNS servers in the directory.
+                  Required when DHCP is not configured. For more information, see https://docs.aws.amazon.com/directoryservice/latest/admin-guide/simple_ad_dns.html"
+                allowedPattern: "((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
+            runtimeConfig:
+              aws:domainJoin:
+                properties:
+                  directoryId: "{{ directoryId}}"
+                  directoryName: "{{ directoryName }}"
+                  dnsIpAddresses: "{{ dnsIpAddresses }}"
+
+
+      bastionHost:
+        Type: AWS::EC2::Instance
+        Properties:
+          SubnetId: !Ref PublicSubnet1
+          ImageId: !Ref LatestAmiId
+          InstanceType: "m5.large"
+          KeyName: !Ref WinKeyName
+          SecurityGroupIds: [!Ref PublicSecGroup]
+          SsmAssociations:
+          - DocumentName:
+              Ref: document
+            AssociationParameters:
+            - Key: directoryId
+              Value:
+              - Ref: sqlAD
+            - Key: directoryName
+              Value:
+              - rdssql.rds.com
+            - Key: dnsIpAddresses
+              Value:
+                Fn::GetAtt:
+                - sqlAD
+                - DnsIpAddresses
+          IamInstanceProfile:
+            Ref: bastionInstanceProfile
+          Tags:
+            - Key: Name
+              Value: !Sub ${AWS::StackName}-bastion-host
+
+
+    Outputs:
+      labVPCID:
+        Description: RDS SQL Server Lab VPC
+        Value: !Ref PubPrivateVPC    
+      activeDirectory:
+        Description: AWS Managed Microsoft Active Directory
+        Value: "rdssql.rds.com" 
+      domainUser:
+        Description: domain adminitrator user name
+        Value: "rdssql\\admin"
+      domainUserPassword:
+         Description: Password for domain administrator user 
+         Value: !Ref DomainAdminPassword                
+      bastionInstance:
+        Description: Bastion Instance ID
+        Value: !Ref bastionHost
+      dbSubnetGroup:
+        Description: Database Subnet Group
+        Value: !Ref DBSubnetGroup
+      dbSecurityGroup:
+        Description: Database Security Group
+        Value: !Ref SQLSecGroup
