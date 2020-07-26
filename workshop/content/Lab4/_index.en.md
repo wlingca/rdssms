@@ -5,6 +5,11 @@ weight = 40
 chapter = true
 +++
 
+#### Before starting this lab, please complete
+1. [Prerequisite environment setup](lab0.html)
+2. [Create a new RDS SQL Server](lab1.html)
+
+
 <div align="left">This Lab will walk through the use of Database Parameters and Options</div>
 
 ## This lab contains following tasks:

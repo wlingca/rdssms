@@ -29,8 +29,11 @@ re = "<b>2. </b>"
 * It would take a few minutes for Multi-AZ to be setup. Once the process is completed the Status of database instance would change from **Modifying** to **Available**.
 {{% img "multiaz-modifying.png" "Multi-AZ" %}}
 
-* From the Databases page, ensure that **Status** is `Available` click on **Database Instance**
+* From the Databases page, ensure that **Status** is `Available` click on the database instance name `sqlserver-rdssql`.
 {{% img "multiaz-validate1.png" "Multi-AZ" %}}
 
 * On the **Summary** page click on **Configuration** tab. Note that the `Multi AZ` now shows **Yes (Always On)**. Also note that `Region & AZ` (primary server availability zone) and `Secondary Zone` (stand by server availability zone) will show separate availability zones as shown below..
 {{% img "multiaz-validate2.png" "Multi-AZ" %}}
+
+* On the **Summary** page click on **Connectivity & security** tab, copy and paste the **Listener endpoint** information to notepad for later use.
+{{% img "multiaz-endpoint.png" "Multi-AZ" %}}

@@ -3,7 +3,7 @@ CanonifyURLs=true
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
-title = "RDS SQL Server Immersion Day Labs"
+title = "Amazon RDS for SQL Server Workshop"
 theme = "learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
@@ -15,8 +15,8 @@ pygmentsStyle = "monokai"
 
 [params]
   editURL = "https://code.amazon.com/packages/Aws-workshop-template/blobs/master/--/workshop/content/"
-  description = "RDS SQL Server Immersion Day Labs"
-  author = "Aditya Samant"
+  description = "Amazon RDS for SQL Server Workshop"
+  author = "Jane Architect"
   disableBreadcrumb = false
   disableNextPrev = false
   themeVariant = "aws"
@@ -41,7 +41,6 @@ hrefTargetBlank = true
 
 [Languages]
 [Languages.en]
-title = "RDS SQL Server Immersion Day Labs"
+title = "Amazon RDS for SQL Server Workshop"
 weight = 1
 languageName = "English"
-

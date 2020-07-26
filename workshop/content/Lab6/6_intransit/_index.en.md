@@ -1,15 +1,15 @@
 +++
-title = "In Transit Encryption (SSL)"
+title = "In Transit Encryption with SSL (10 mins)"
 date = 2020-06-07T15:32:22-04:00
-weight = 60
+weight = 45
 +++
 
 #### **Enable SSL from Parameters**
 
-* Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home?region=us-east-1) and click on [Parameters groups](https://console.aws.amazon.com/rds/home?region=us-east-1#option-groups-list:) from left navigation pane. Click on the Parameter group that was created in the create parameter labs.
+* Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home) and click on [Parameters groups](https://console.aws.amazon.com/rds/home#parameter-groups:) from left navigation pane. Click on the Parameter group `sql-2017-force-ssl-enable-clr` that was created in the [Create new Parameter group](../lab4/2_newparamgroup.html) labs.
 {{% img "ssl_1.png" "SSL" %}}
 
-* Search the Parameters named **rds.force_ssl** from filter and select the filter then click on `Edit parameters`. 
+* Search the Parameter named **rds.force_ssl** from filter and select the filter then click on `Edit parameters`. 
 {{% img "ssl_2.png" "SSL" %}}
 
 * Select 1 from Values drop down for **rds.force_ssl** then click on Save changes.

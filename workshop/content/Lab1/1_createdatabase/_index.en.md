@@ -45,9 +45,11 @@ For this lab SQL Server Enterprise Edition has been selected and will incur some
 
 **Storage**
 
-* `Storage type`: General Purpose (SSD)
+* `Storage type`: Provisioned IOPS (SSD)
 
 * `Allocated storage`: 20 GiB
+
+* `Provisioned IOPS`: 1000
 
 * `Storage autoscaling`: Check Enable storage autoscaling
 

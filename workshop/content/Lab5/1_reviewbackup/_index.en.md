@@ -1,5 +1,5 @@
 +++
-title = "Review backup options and take a manual snapshot (20 mins)"
+title = "Review backup options and take a manual snapshot"
 date = 2020-05-30T17:17:11-04:00
 weight = 10
 +++
@@ -18,7 +18,7 @@ weight = 10
 * From **Take DB Snapshot** provide **Snapshot name**: `snapshot-sqlserver-rdssql` and click on `Take Snapshot`.
 {{% img "review4.png" "review" %}}
 
-* Under **Snapshots**, click on `Manual` tab and notice the Snapshot you have just taken in the last step. It would take a while to complete and Snapshot creation time to appear.
+* Under **Snapshots**, click on `Manual` tab and notice the Snapshot you have just taken in the last step. It would take about 20 minutes for the operation to complete and Snapshot creation time to appear. You may move on with the rest of the labs and come back to check on the status later.
 {{% img "review5.png" "review" %}}
 
 * Optionally you may view all snapshtos by clicking on **Snapshots** section. To see automatic snapshots, click on **System** tab.

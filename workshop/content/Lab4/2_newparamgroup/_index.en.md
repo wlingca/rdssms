@@ -25,7 +25,7 @@ The parameter groups are specific to RDS SQL Server Version and Edition. In the 
 * Once created you should see the parameter in the list as below
 {{% img "newparam3.png" "New Parameter" %}}
 
-* Click on the parameter group `sql-2017-force-ssql-enable-clr`. From **Parameters** page, clikc on `Edit parameters`.
+* Click on the parameter group `sql-2017-force-ssl-enable-clr`. From **Parameters** page, clikc on `Edit parameters`.
 {{% img "clr_2.png" "CLR" %}}
 
 * From the **Filter parameters** type `CLR Enabled`.

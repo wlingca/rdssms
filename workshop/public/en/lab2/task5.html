@@ -3,18 +3,18 @@
 <html lang="en" class="js csstransforms3d">
 <head>
   <meta charset="utf-8">
-  <meta property="og:title" content="RDS MySQL Immersion Day Labs" />
+  <meta property="og:title" content="RDS SQL Server Immersion Day Labs" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="generator" content="Hugo 0.68.1" />
-  <meta name="description" content="RDS MySQL Immersion Day Labs">
-<meta name="author" content="Aditya Samant">
+  <meta name="description" content="RDS SQL Server Immersion Day Labs">
+<meta name="author" content="Wanda He">
 
   <link rel="shortcut icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
 <link rel="icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
 
-  <title>Verify DB Instance :: RDS MySQL Immersion Day Labs</title>
+  <title>Verify DB Instance :: RDS SQL Server Immersion Day Labs</title>
 
   
   <link href="../../css/nucleus.css" rel="stylesheet">
@@ -277,13 +277,13 @@
  
   
     
-    <li data-nav-id="/en/lab2.html" title="Lab2 - Create a new RDS MySQL instance" class="dd-item 
+    <li data-nav-id="/en/lab2.html" title="Lab2 - Create a new RDS SQL Serverinstance" class="dd-item 
         parent
         
         
         ">
       <a href="../../en/lab2.html">
-          <b>3. </b>Lab2 - Create a new RDS MySQL instance
+          <b>3. </b>Lab2 - Create a new RDS SQL Serverinstance
           
       </a>
       
@@ -1098,7 +1098,7 @@
           
           
           
-          <a href='../../en/'>AWS Workshop Template</a> > <a href='../../en/lab2.html'>Lab2 - Create a new RDS MySQL instance</a> > Verify DB Instance
+          <a href='../../en/'>AWS Workshop Template</a> > <a href='../../en/lab2.html'>Lab2 - Create a new RDS SQL Serverinstance</a> > Verify DB Instance
           
           
           
@@ -1130,7 +1130,7 @@
 	<p>Let&rsquo;s make sure your DB instance has been created properly. First let&rsquo;s ensure the credentials have been saved correctly in the environment variables, run:</p>
 <pre><code>echo $DBUSER
 </code></pre><p>You should see <code>masteruser</code> as the response string. Next, verify the version of the database engine created. Run the command below, replacing the [<code>DBEndpont</code>] placeholder with the value of the DB endpoint created in the preceding steps:</p>
-<pre><code>mysql -h[DBEndpoint] -u$DBUSER -p&quot;$DBPASS&quot; -e&quot;SELECT @@version;&quot;
+<pre><code>SQL Server-h[DBEndpoint] -u$DBUSER -p&quot;$DBPASS&quot; -e&quot;SELECT @@version;&quot;
 
 </code></pre><p>You should see a response containing version number <code>5.7.24</code>.</p>
 

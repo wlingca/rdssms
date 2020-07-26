@@ -1,11 +1,9 @@
 +++
 title = "Create CloudWatch Alarm"
 date = 2020-06-15T09:42:02-07:00
-weight = 50
+weight = 40
 +++
-
-* From **RDS Service Console**, select to **Databases** from the left menu bar, and click on **sqlserver-rdssql** from the database list. On the database details view, click on the **Logs & events** tab. Then click on **Create alarm**.
-
+* Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home) and click on [Databases](https://console.aws.amazon.com/rds/home#databases:) from left navigation pane. From list of databases, click on `sqlserver-rdssql` under **DB identifier**. On the database details view, click on the **Logs & events** tab. Then click on **Create alarm**.
 {{% img "logNevent.png" "log and event" %}}
 
 * Create a new alarm to get an email notification if database instance CPU utilization reaches 80% or above for over 15 minutes. Be sure to select “Send Notifications to New Email address”, define a topic name, and put in your email address. Select CPU Utilization, 80% threshold & 1 evaluation period of 15 Minute. Then click **Create alarm**.

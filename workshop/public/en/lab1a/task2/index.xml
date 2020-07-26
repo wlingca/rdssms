@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Verify Lab Environment on RDS MySQL Immersion Day Labs</title>
+    <title>Verify Lab Environment on RDS SQL Server Immersion Day Labs</title>
     <link>/en/lab1a/task2.html</link>
-    <description>Recent content in Verify Lab Environment on RDS MySQL Immersion Day Labs</description>
+    <description>Recent content in Verify Lab Environment on RDS SQL Server Immersion Day Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 21 Apr 2020 22:54:25 -0500</lastBuildDate>

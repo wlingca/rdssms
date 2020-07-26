@@ -1,9 +1,13 @@
 +++
-title = "Create a new RDS SQL Server (20 mins)"
+title = "Create a new RDS SQL Server (25 mins)"
 date = 2020-04-22T23:10:18-05:00
 weight = 10
 chapter = true
 +++
+
+#### Before starting this lab, please complete
+1. [Prerequisite environment setup](lab0.html)
+
 
 <div align="left">This lab will walk you through the steps of creating a RDS SQL Server instance, and configuring the needed parameters. At the end of this lab you will have a database instance ready to be used for subsequent labs.</div>  
 

@@ -1,9 +1,9 @@
 #name - DNS-friendly name for the workshop. This will be used when generating the hosting URL (ie. https://my-first-workshop.workshops.aws/)
-name: rdsmy
+name: rdssms
 #title - The title of your workshop
 title: RDS SQl Server Immersion Day 
 #description - A short description that will be displayed in search results
-description: Creating unicorns with serverless bitcoin magic! 
+description: Welcome to the Amazon RDS for SQL Server databases workshop! Here you will find a collection of hands-on labs aimed at helping you gain an understanding of the RDS for SQL Server features.
 #categories - Refer to official AWS categories covered by the workshop content here
 categories: 
   - Database
@@ -11,13 +11,13 @@ categories:
 services: 
    - RDS SQL Server
 #level - Approximate skill level needed for this workshop
-level: 400 
+level: 200 
 #duration - Estimated duration in minutes
-duration: 480 
+duration: 310 
 #cost - Cost in USD. If the content is offered without cost, enter 0
 cost: 0 
 #author - Amazon alias of the primary author of the content
-author: ausamant 
+author: SSwarndeep, wanhe, hanishg
 #audience - Names of the personas associated with this workshop
 audience: 
   - DBA

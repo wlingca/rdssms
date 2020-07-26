@@ -3,18 +3,18 @@
 <html lang="en" class="js csstransforms3d">
 <head>
   <meta charset="utf-8">
-  <meta property="og:title" content="RDS MySQL Immersion Day Labs" />
+  <meta property="og:title" content="RDS SQL Server Immersion Day Labs" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="generator" content="Hugo 0.68.1" />
   <meta name="description" content="Use metadata to catalogue and describe your workshop">
-<meta name="author" content="Aditya Samant">
+<meta name="author" content="Wanda He">
 
   <link rel="shortcut icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
 <link rel="icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
 
-  <title>Metadata :: RDS MySQL Immersion Day Labs</title>
+  <title>Metadata :: RDS SQL Server Immersion Day Labs</title>
 
   
   <link href="../../css/nucleus.css" rel="stylesheet">
@@ -277,13 +277,13 @@
  
   
     
-    <li data-nav-id="/en/lab2.html" title="Lab2 - Create a new RDS MySQL instance" class="dd-item 
+    <li data-nav-id="/en/lab2.html" title="Lab2 - Create a new RDS SQL Serverinstance" class="dd-item 
         
         
         
         ">
       <a href="../../en/lab2.html">
-          <b>3. </b>Lab2 - Create a new RDS MySQL instance
+          <b>3. </b>Lab2 - Create a new RDS SQL Serverinstance
           
       </a>
       
@@ -1132,29 +1132,39 @@
 <div class="notices note" ><p>A <code>metadata.yml</code> file is required for all workshops that are intended to be reused and shared broadly.</p>
 </div>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e">#name - DNS-friendly name for the workshop. This will be used when generating the hosting URL (ie. https://my-first-workshop.workshops.aws/)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e">#name - DNS-friendly name for the workshop. This will be used when generating the hosting URL (ie. https://my-first-workshop.workshops.aws/)
+</span>
 <span style="color:#66d9ef">name</span>: my-first-workshop
-<span style="color:#75715e">#title - The title of your workshop</span>
+<span style="color:#75715e">#title - The title of your workshop
+</span>
 <span style="color:#66d9ef">title</span>: My First Workshop 
-<span style="color:#75715e">#description - A short description that will be displayed in search results</span>
+<span style="color:#75715e">#description - A short description that will be displayed in search results
+</span>
 <span style="color:#66d9ef">description</span>: Creating unicorns with serverless bitcoin magic! 
-<span style="color:#75715e">#categories - Refer to official AWS categories covered by the workshop content here</span>
+<span style="color:#75715e">#categories - Refer to official AWS categories covered by the workshop content here
+</span>
 <span style="color:#66d9ef">categories</span>: 
   - Networking
   - Compute
-<span style="color:#75715e">#services - Refer to the official AWS service names covered by the workshop content here</span>
+<span style="color:#75715e">#services - Refer to the official AWS service names covered by the workshop content here
+</span>
 <span style="color:#66d9ef">services</span>: 
    - Api Gateway
    - Lambda
-<span style="color:#75715e">#level - Approximate skill level needed for this workshop</span>
+<span style="color:#75715e">#level - Approximate skill level needed for this workshop
+</span>
 <span style="color:#66d9ef">level</span>: <span style="color:#ae81ff">100</span> 
-<span style="color:#75715e">#duration - Estimated duration in minutes</span>
+<span style="color:#75715e">#duration - Estimated duration in minutes
+</span>
 <span style="color:#66d9ef">duration</span>: <span style="color:#ae81ff">60</span> 
-<span style="color:#75715e">#cost - Cost in USD. If the content is offered without cost, enter 0</span>
+<span style="color:#75715e">#cost - Cost in USD. If the content is offered without cost, enter 0
+</span>
 <span style="color:#66d9ef">cost</span>: <span style="color:#ae81ff">0</span> 
-<span style="color:#75715e">#author - Amazon alias of the primary author of the content</span>
+<span style="color:#75715e">#author - Amazon alias of the primary author of the content
+</span>
 <span style="color:#66d9ef">author</span>: mpgoetz 
-<span style="color:#75715e">#audience - Names of the personas associated with this workshop</span>
+<span style="color:#75715e">#audience - Names of the personas associated with this workshop
+</span>
 <span style="color:#66d9ef">audience</span>: 
   - IT Professional
   - Developer

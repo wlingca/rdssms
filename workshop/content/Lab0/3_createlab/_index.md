@@ -1,5 +1,5 @@
 +++
-title = "Creating a lab environment using AWS CloudFormation"
+title = "Creating a lab environment using AWS CloudFormation (25 mins)"
 date = 2020-04-20T22:52:43-05:00
 weight = 30
 +++

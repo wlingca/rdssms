@@ -1,9 +1,15 @@
 +++
-title = "Backup and Restore"
+title = "Backup and Restore (30 mins)"
 date = 2020-05-30T17:02:49-04:00
 weight = 60
 chapter = true
 +++
+
+#### Before starting this lab, please complete
+1. [Prerequisite environment setup](lab0.html)
+2. [Create a new RDS SQL Server](lab1.html)
+3. [Database Parameters and Options](lab4.html)
+
 
 <div align="left">This Lab will walk through the use of various backup and restore options</div>
 

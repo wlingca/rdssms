@@ -1,12 +1,12 @@
 +++
-title = "Review Network Security"
+title = "Review Network Security (5 mins)"
 date = 2020-06-06T22:32:59-04:00
 weight = 10
 +++
 
 In this Lab, you will review the Network Security that includes VPCs, Security Groups and Subnet Groups.
 
-* Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home?region=us-east-1) and click on [Databases](https://console.aws.amazon.com/rds/home?region=us-east-1#databases:) from left navigation pane. From list of databases click on `sqlserver-rdssql` under **DB identifier**.
+* Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home) and click on [Databases](https://console.aws.amazon.com/rds/home#databases:) from left navigation pane. From list of databases click on `sqlserver-rdssql` under **DB identifier**.
 {{% img "network1.png" "review" %}}
 
 * From Database Page, click on `Connectivity & security` tab and view the **VPC** and **Subnet group** from **Networking section**. Also review the **VPC Security groups** from **Security** section.
@@ -23,8 +23,10 @@ In this Lab, you will review the Network Security that includes VPCs, Security G
 * From **Subnet group** note the subnet group name.
 * From left page click on `Subnet groups` and click on the subnet group name as you noted in previous step.
 {{% img "network4.png" "review" %}}
+
 * You will notice multiple subnets under the **Subnets** section. Click on one the first Subnet ID.
 {{% img "network5.png" "review" %}}
+
 * From **Subnets** page click and review `Route Table` and `Network ACL` tabs to understand how network is routed and the restrictions on inbound or outbound rules.
 {{% img "network6.png" "review" %}}
 
@@ -32,7 +34,7 @@ In this Lab, you will review the Network Security that includes VPCs, Security G
 * Navigate back to **RDS Database instance** and click on `sqlserver-rdssql`.
 * Under VPC security groups click on security groups link.
 * From Security groups, click on Inbound rules, you can allow or disallow different ports to the Source.
-* Click on `Edit inbout rules`.
+* Click on `Edit inbound rules`.
 {{% img "network7.png" "review" %}}
 
 * The **Edit inbound rules** allows to add\modify rules to control the incoming traffic. 

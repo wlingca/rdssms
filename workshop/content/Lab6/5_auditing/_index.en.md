@@ -1,15 +1,15 @@
 +++
-title = "Auditing"
+title = "Auditing (10 mins)"
 date = 2020-06-07T14:42:36-04:00
 weight = 50
 +++
 
 #### **Create S3 bucket to store Audit Data**
 
-* Navigate to [Amazon S3](https://s3.console.aws.amazon.com/s3/home?region=us-east-1#) and click on `Create bucket`.
+* Navigate to [Amazon S3](https://s3.console.aws.amazon.com/s3/home) and click on `Create bucket`.
 {{% img "tde_0.png" TDE %}}
 
-* From the **Create bucket** page provide the information as below
+* From the **Create bucket** page provide the information as below. **Bucket name** needs to be globally unique. You may add your initials or other unique characters for unique bucket name.
 
     * **Bucket name**: `sqlimmersion-sql-audit-data`
 
@@ -20,10 +20,10 @@ weight = 50
 
 #### **Enable Auditing option**
 
-* Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home?region=us-east-1) and click on [Options groups](https://console.aws.amazon.com/rds/home?region=us-east-1#option-groups-list:) from left navigation pane. 
+* Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home) and click on [Options groups](https://console.aws.amazon.com/rds/home#option-groups-list:) from left navigation pane. 
 
 * From **Options group** select options group `sql-2017-enable-native-backup-audit-tde` and click on `Add option`
-{{% img "tde_2.png" TDE %}}
+{{% img "audit1.png" audit %}}
 
 * From **Option name** select `SQLSERVER_AUDIT`
 

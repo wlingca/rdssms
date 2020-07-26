@@ -20,7 +20,7 @@ In this lab, a new databases will be created and then a backup to S3 will be per
 
 #### ***Create new Database***
 
-* Open remote desktop connection to bastion host and connect to Database instance using SSMS. You may go back to the previous labs named [Connect to SQL Server using SSMS]({{% siteurl %}}lab1/3_clientconnection.html) for instructions.
+* Open remote desktop connection to bastion host and connect to Database instance using SSMS. You may go back to the previous labs named [Connect to SQL Server using SSMS](../lab1/3_clientconnection.html) for instructions.
 
 * Once you are connected to Database Instance using SSMS, click on `New Query`. In query window type or copy the following command and click on `Execute` to create new database.
 
