@@ -6,7 +6,7 @@ chapter = true
 +++
 
 #### Before starting this lab, please complete
-1. [Prerequisite environment setup](lab0.html)
+1. [Getting started](lab0.html)
 2. [Create a new RDS SQL Server](lab1.html)
 
 <div align="left">In this lab you will enable Multi-AZ for the RDS SQL Server Instance. Multi-AZ is the high availability feature RDS. It deploys RDS database instances in multiple availability zones with synchronous replication between the instances. In the event of the primary database instance fails, the secondary instance automatically takes over to become the new primary.</div>  

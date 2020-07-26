@@ -23,7 +23,7 @@ weight = 30
 
 {{% img "get-pwd-1.png" "connection" %}}
 
-* Choose **Browse** to select the **sqlimmersion.pem** key file that was saved in the **Prerequisites lab**, click **Open**, and then click on **Decrypt Password**. 
+* Choose **Browse** to select the **.pem** key file that was saved in the **Getting started** section, click **Open**, and then click on **Decrypt Password**. 
 
 {{% img "get-pwd-2.png" "connection" %}}
 

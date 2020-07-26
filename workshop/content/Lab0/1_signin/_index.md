@@ -1,13 +1,17 @@
 +++
-title = "Signing into the AWS Management console"
+title = "Sign in: using regular AWS account"
 date = 2020-04-20T22:43:00-05:00
-weight = 10
+weight = 15 
 +++
 
-If you are running these labs in a formal, instructional setting, please use the Console URL, and credentials provided to you to access and log into the AWS Management Console. Otherwise, please use your own credentials. You can access the console at: https://console.aws.amazon.com/ or through the Single Sign-On (SSO) mechanism provided by your organization.
+<div align="left">If you are running this workshop in an AWS-sponsored or AWS-staffed event, please go to <a href="1_signin_ee.html">Sign in: from an AWS event</a>.
 
+* Using your own credentials. You can access the <a href="https://console.aws.amazon.com/">AWS Management Console</a>.</div>
 {{% img "console.png" "Console" %}}
 
-If you are running these labs in a formal, instructional setting, **please use the AWS region provided.** Ensure the correct AWS region is selected in the top right corner, if not use that dropdown to choose the correct region. The labs are designed to work in any of the regions where Amazon RDS SQL Server compatible is available. 
+* The labs are designed to work for the following AWS regions: Ohio, N. Virginia, N. California, Oregon, Montreal, Franfurt, Ireland, London, Paris, Singapore, Sydney, Mumbai,Tokyo, Seoul. The lab examples use **US-EAST-1 (Northern Virginia)** region.
 
+* After loggin onto [AWS Management Console](https://console.aws.amazon.com/), ensure the correct AWS region is selected in the top right corner.
 {{% img "region.png" "Region" %}}
+
+

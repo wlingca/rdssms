@@ -6,7 +6,7 @@ chapter = true
 +++
 
 #### Before starting this lab, please complete
-1. [Prerequisite environment setup](lab0.html)
+1. [Getting started](lab0.html)
 2. [Create a new RDS SQL Server](lab1.html)
 
 

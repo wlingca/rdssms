@@ -1,16 +1,11 @@
 +++
-title = "Prerequisites (30 mins)"
+title = "Getting started"
 date = 2020-04-20T22:10:58-05:00
 weight = 1
-chapter = true
 +++
 
-## Deploy the environment
+<div align="left">Before you start the workshop, you need to setup some resources on AWS for the hands-on labs. This section describes the steps to provision the AWS resources that are required.</div>
 
-<div align="left">The following steps should be completed before getting started with any of the labs in this repository. Not all steps may apply to all students or environments.</div>
+* If you are running this workshop in an AWS-sponsored or AWS-staffed event, it is likely that you are given a temporary AWS account environment. You need to follow the instructions on [Sign in: from an AWS Event](lab0/1_sigin_ee.html) section.
 
-## This lab contains the following tasks
-1. [Signing in to the AWS Management Console](lab0/1_signin.html)
-2. [Create key pair for bastion host](lab0/2_keypair.html)
-3. [Creating a lab environment using AWS CloudFormation](lab0/3_createlab.html)
-4. [Verify lab environment](lab0/4_verifylab.html)
+* If you are running this workshop in your own AWS account, or you are advised by AWS staff to configure the workshop environment manually, you need to follow the instructions on [Sign in: Regular AWS Account](lab0/1_signin.html) section.
