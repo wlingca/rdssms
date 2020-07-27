@@ -6,11 +6,11 @@
 
 
 use [master]
-CREATE DATABASE [db4]
+CREATE DATABASE [db2]
  CONTAINMENT = NONE
 GO
 
-USE [db4]
+USE [db2]
 GO
 
 CREATE TABLE [dbo].[Posts](
