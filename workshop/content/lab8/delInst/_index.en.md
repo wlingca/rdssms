@@ -27,7 +27,4 @@ Follow steps to remove any read replica or database instance(s) created in the w
 2. On the **Delete instance** page, uncheck the **Create final snapshot?** and **Retain automated backups** options. Select option for **I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available**. Type `delete me` in the textbox to confirm deletion of the database instance, then press the **Delete** button.
 {{% img "delinst5.png" "delinst" %}}
 
-3. **Status** of the replica instance will change to **Deleting**. You may click on the **Refresh icon** to get the latest status of the operation.
-{{% img "delinst3.png" "delinst" %}}
-
-4. Repeat steps for any additional database instance(s) created.
+3. Repeat steps for any additional database instance(s) created.
