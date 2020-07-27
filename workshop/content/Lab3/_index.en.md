@@ -1,7 +1,7 @@
 +++
-title = "Scaling and optimization (80 mins) "
+title = "Scaling and Optimization (80 mins) "
 date = 2020-04-24T12:50:49-06:00
-weight = 300
+weight = 90
 chapter = true
 +++
 

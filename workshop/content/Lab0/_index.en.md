@@ -1,5 +1,5 @@
 +++
-title = "Getting started"
+title = "Getting Started"
 date = 2020-04-20T22:10:58-05:00
 weight = 1
 +++
