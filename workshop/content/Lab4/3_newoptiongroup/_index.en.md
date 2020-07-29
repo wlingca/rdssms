@@ -28,5 +28,5 @@ The option groups are specific to RDS SQL Server Version and Edition. In the ini
 {{% img "newoption3.png" "New Option" %}}
 
 {{% notice info %}} 
-Please note that we have not turn on any options with this option group. We will be adding options  to the option group in the upcoming labs.
+Please note that we have not turned on any options with this option group. We will be adding options  to the option group in the upcoming labs.
 {{% /notice %}}

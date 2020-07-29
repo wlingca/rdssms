@@ -4,7 +4,7 @@ date = 2020-04-21T21:18:20-05:00
 weight = 40
 +++
 
-* Go to the [AWS Management Console](https://console.aws.amazon.com/), ensure you are on the correct AWS Region. If you’re in a different region, please change the region from the top right conrner of the screen to the designated region.
+* Go to the [AWS Management Console](https://console.aws.amazon.com/), ensure you are on the correct AWS Region. If you’re in a different region, please change the region from the top right corner of the screen to the designated region.
 {{% img "region.png" "Region" %}}
 
 * Navigate to [AWS CloudFormation](https://console.aws.amazon.com/cloudformation/) and click on the **sqlimmersion-stack** stack.

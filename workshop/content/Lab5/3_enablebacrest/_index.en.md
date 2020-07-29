@@ -4,7 +4,7 @@ date = 2020-05-31T23:27:22-04:00
 weight = 30
 +++
 
-In this section, an S3 will be created. Then Backup and Restore option will be enabled and access will be granted to S3 bucket where native backup will be stored.
+In this section, you will create a S3 bucket. Then Backup and Restore option will be enabled and access will be granted to S3 bucket where native backup will be stored.
 
 #### ***Create S3 Bucket***
 Navigate to the [AWS S3 Console](https://s3.console.aws.amazon.com/s3/home)
@@ -26,7 +26,7 @@ Navigate to the [AWS S3 Console](https://s3.console.aws.amazon.com/s3/home)
 
 #### ***Backup and Restore Options***
 
-* Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home). Once you are database page, follow this sequence:
+* From the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home):
 
     * Click on `Option groups` on left pane.
     * Select Option group `sql-2017-enable-native-backup-audit-tde` from **Option groups** section. 

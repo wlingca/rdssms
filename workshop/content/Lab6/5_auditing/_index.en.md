@@ -9,7 +9,7 @@ weight = 50
 * Navigate to [Amazon S3](https://s3.console.aws.amazon.com/s3/home) and click on `Create bucket`.
 {{% img "tde_0.png" TDE %}}
 
-* From the **Create bucket** page provide the information as below. **Bucket name** needs to be globally unique. You may add your initials or other unique characters for unique bucket name.
+* On the **Create bucket** page provide the information as below. **Bucket name** needs to be globally unique. You may add your initials or other unique characters for unique bucket name.
 
     * **Bucket name**: `sqlimmersion-sql-audit-data`
 
@@ -22,18 +22,18 @@ weight = 50
 
 * Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home) and click on [Options groups](https://console.aws.amazon.com/rds/home#option-groups-list:) from left navigation pane. 
 
-* From **Options group** select options group `sql-2017-enable-native-backup-audit-tde` and click on `Add option`
+* On **Options group** page, select `sql-2017-enable-native-backup-audit-tde` and click on `Add option`
 {{% img "audit1.png" audit %}}
 
-* From **Option name** select `SQLSERVER_AUDIT`
+* **Option name**: `SQLSERVER_AUDIT`
 
-* From **S3 Bucket** dropdown select the bucket name created above `sqlimmersion-sql-audit-data`.
+* **S3 Bucket**: `sqlimmersion-sql-audit-data`.
 
-* For **IAM role** select `Create a new role`.
+* **IAM role**: `Create a new role`.
 
-* For **IAM role** name enter `sqlimmersion-write-s3-bucket`
+* **IAM role**: `sqlimmersion-write-s3-bucket`
 
-* Select `Immediately` from Scheduling and click on `Add option`.
+* Select the **Immediately** option from Scheduling and click on `Add option`.
 {{% img "tde_3.png" TDE %}}
 
 

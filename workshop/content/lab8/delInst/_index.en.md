@@ -21,10 +21,21 @@ Follow steps to remove any read replica or database instance(s) created in the w
 
 #### Delete database instance
 
-1. Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home) and click on [Databases](https://console.aws.amazon.com/rds/home#databases:) from left navigation pane. From list of databases, select the database instance to delete, for example `sqlserver-rdssql`. Choose **Delete** from the **Actions** dropdown menu.  
+1. Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home) and click on [Databases](https://console.aws.amazon.com/rds/home#databases:) from left navigation pane. 
+
+2. From list of databases, select `sqlserver-rdssql` under **DB identifier** and then click on `Modify`.
+{{% img "console.png" "delinst" %}}
+
+3. On the modify page, scroll to the bottom of the page, uncheck the **Enable deletion protection** option if check, then click on `Continue`.
+{{% img "delinst0.png" "delinst" %}}
+
+4. Select **Apply immediately**, and click on `Modify DB Instance`.
+{{% img "applyImmediately.png" "delinst" %}}
+
+5. From the list of databases view, select `sqlserver-rdssql`, select **Delete** from the **Actions** dropdown menu.  
 {{% img "delinst4.png" "delinst" %}}
 
-2. On the **Delete instance** page, uncheck the **Create final snapshot?** and **Retain automated backups** options. Select option for **I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available**. Type `delete me` in the textbox to confirm deletion of the database instance, then press the **Delete** button.
+6. On the **Delete instance** page, uncheck the **Create final snapshot?** and **Retain automated backups** options. Select option for **I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available**. Type `delete me` in the textbox to confirm deletion of the database instance, then press the **Delete** button.
 {{% img "delinst5.png" "delinst" %}}
 
-3. Repeat steps for any additional database instance(s) created.
+7. Repeat steps 2-6 for any additional database instance(s) created.

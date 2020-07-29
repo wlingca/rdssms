@@ -29,12 +29,12 @@ To simplify the getting started experience with the labs, we have created founda
 
 * In Stack details page populate the form with values specified below.
 
-    | Inpute Parameter      | Value                                                                     |
-    | --------------------  | ------------------------------------------------------------------------- |
-    | Stack Name            | sqlimmersion-stack                                                        |
-    | Domain Admin Password | Amazon1!                                                                  |
-    | Bastion AMI           | /aws/service/ami-windows-latest/Windows_Server-2019-English-Full-SQL_2017_Express                                                |    
-    | Key Name              | sqlimmersion ***(This is the keypair that you created in previous lab)*** |
+    | Input Parameter      | Value                                                                     |
+    | -------------------  | ------------------------------------------------------------------------- |
+    | Stack Name           | sqlimmersion-stack                                                        |
+    | DomainAdminPassword  | Amazon1!                                                                  |
+    | LatestAmiId          | /aws/service/ami-windows-latest/Windows_Server-2019-English-Full-SQL_2017_Express                                                |    
+    | WinKeyName           | sqlimmersion ***(This is the keypair that you created in previous lab)*** |
 
 
 * Scroll to the bottom of the page and click **Next**.

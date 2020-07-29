@@ -41,7 +41,7 @@ weight = 30
 
 {{% img "get-pwd-5.png" "connection" %}}
 
-* After logging in bastion host, open **SSMS (SQL Server Management Studio)** to connect to SQL Server.
+* After logging into bastion host, open **SSMS (SQL Server Management Studio)** to connect to SQL Server.
 
 {{% img "ssms-1.png" "connection" %}}
 

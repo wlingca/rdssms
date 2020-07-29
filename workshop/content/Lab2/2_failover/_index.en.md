@@ -4,7 +4,7 @@ date = 2020-05-21T23:06:29-04:00
 weight = 20
 +++
 
-* Open remote desktop connection to the bastion host. You may go back to onf of the previous labs named [Connect to SQL Server using SSMS](../lab1/3_clientconnection.html) for instructions.
+* Open remote desktop connection to the bastion host. You may go back to the previous labs named [Connect to SQL Server using SSMS](../lab1/3_clientconnection.html) for instructions.
 
 * From the bastion host, launch a Powershell session from the Start menu. 
 {{% img "ps1.png" "failover" %}}
@@ -35,7 +35,7 @@ weight = 20
 * On the **Reboot DB Instance** page select `Reboot with Failover?` option and then click on `Reboot`.  
 {{% img "multiaz-reboot.png" "failover" %}}
 
-* The database instance status will change to **Rebooting**. This would force a failover.
+* The database instance status will change to **Rebooting**. This will force a failover.
 {{% img "reboot-progress.png" "failover" %}}
 
 * Now switch back to the **Powershell** window to monitor the failover. Notice that a Primary instance failure occurred at 12:42:57 AM, triggers a database instance failover. During the failover, connection was interrupted. Database instance failover completed 21 seconds later at 12:43:18 AM. The old Secondary instance became the new Primary instance.

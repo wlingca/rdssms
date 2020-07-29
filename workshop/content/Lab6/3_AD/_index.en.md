@@ -66,7 +66,7 @@ weight = 30
 * Now try to log onto the SQL Server instance with Windows Authentication. In the **Object Explorer**, click on **Connect**, then select **Database Engine**.
 {{% img "connect.png" IAM_AD%}}
 
-* In Login Window select `Windows Authentication` as **Authentication** 
+* In Login Window select `Windows Authentication`
 {{% img "iamad_17.png" IAM_AD%}}
 
 * You should be able to connect successfully using Windows Authentication

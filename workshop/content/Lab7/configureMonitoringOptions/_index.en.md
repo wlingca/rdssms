@@ -9,7 +9,7 @@ weight = 10
 * Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home) and click on [Databases](https://console.aws.amazon.com/rds/home#databases:) from left navigation pane. From list of databases, select `sqlserver-rdssql` under **DB identifier** and click on `Modify`.
 {{% img "console.png" "console" %}}
 
-* From **Modify DB Instance** page scroll down to **Monitoring** section, check that the **Enable enhanced monitoring** option is checked, and change the **Granularity** to **10 seconds**
+* From **Modify DB Instance** page, scroll down to **Monitoring** section, select the **Enable enhanced monitoring** option, and change the **Granularity** to **10 seconds**
 {{% img "enhancedmonitoring.png" "enhancedmonitoring" %}}
 
 * Scroll down to **Log exports** section, check the **Agent log** and **Error log** options to export SQL Server agent logs and error logs to CloudWatch.

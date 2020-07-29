@@ -85,7 +85,7 @@ For this lab SQL Server Enterprise Edition has been selected and will incur some
 * Leave all other options default and click on **Create database** to create database.
 {{% img "complete-create.png" "Create DB" %}}
 
-* It would take a few minutes to provision the Database Instance. You may monitor the DB Instance provisioning progress from [Databases List](https://console.aws.amazon.com/rds/home#databases:). The status would change to **Available** once Instance gets provisioned. 
+* It will take a few minutes to provision the Database Instance. You may monitor the DB Instance provisioning progress from [Databases List](https://console.aws.amazon.com/rds/home#databases:). The status will change to **Available** once Instance gets provisioned. 
 {{% img "progress1.png" "Create DB" %}}
 
 You may press the **Refresh** icon to check on the latest progress of the **status**. Once the **status** is no longer in **Creating** state, you may move to the next section of the lab.

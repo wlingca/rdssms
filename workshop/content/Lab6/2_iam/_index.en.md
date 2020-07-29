@@ -61,10 +61,10 @@ With IAM policies actions can be allowed or denied at DB Instance level, a good 
 
 * Navigate to [IAM service console](https://console.aws.amazon.com/iam/home).
 
-* From left page click on `Users` and click on the user that you logged in with.
+* From left pane, click on `Users` and click on the user that you logged in with.
 {{% img "iamad_4.png" IAM_AD%}}
 
-* Remove the policy mapping that you mapped earlier by click on `(x)` in front of the policy and then click on `Detach` from **Detach policy** confirmation page to remove the policy.
+* Remove the policy mapping that you mapped earlier by clicking on `(x)` in front of the policy and then click on `Detach` from **Detach policy** confirmation page to remove the policy.
 {{% img "iamad_8.png" IAM_AD%}}
 
 * Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home) and click on [Databases](https://console.aws.amazon.com/rds/home#databases:) from left navigation pane. You will now be able to see DB instances.

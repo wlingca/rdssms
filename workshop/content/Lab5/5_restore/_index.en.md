@@ -16,7 +16,7 @@ When the RDS SQL Server instance is running in Multi-AZ mode, you may only resto
 
 #### ***Using rds_restore_database***
 
-* Use the following SQL Script in SSMS to restore the backup that we back up in previous task with a different name.
+* Use the following SQL Script in SSMS to restore the backup that we backed up in previous task with a different name.
 
         USE msdb
         GO

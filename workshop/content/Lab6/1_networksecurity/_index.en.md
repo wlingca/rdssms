@@ -13,7 +13,7 @@ In this Lab, you will review the Network Security that includes VPCs, Security G
 {{% img "network2.png" "review" %}}
 
 #### **VPC (Virtual Private Cloud)**
-* Marked #1 in the picture, please click on the VPC link, this would open VPC details page
+* Click on the link under **VPC**, this would open VPC details page
 * From VPC page, click on Tab `CIDR Blocks`.
 * Notice the current CIDR IP Range. This is the range of IP addresses for this VPC from where IP will be assigned to resources in this VPC.
 {{% img "network3.png" "review" %}}
@@ -21,7 +21,7 @@ In this Lab, you will review the Network Security that includes VPCs, Security G
 #### **Subnet groups**
 * Navigate back to **RDS Database instance** and click on `sqlserver-rdssql`.
 * From **Subnet group** note the subnet group name.
-* From left page click on `Subnet groups` and click on the subnet group name as you noted in previous step.
+* From left pane, click on `Subnet groups` and click on the subnet group name as you noted in previous step.
 {{% img "network4.png" "review" %}}
 
 * You will notice multiple subnets under the **Subnets** section. Click on one the first Subnet ID.

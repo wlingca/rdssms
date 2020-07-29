@@ -15,25 +15,15 @@ weight = 45
 * Select 1 from Values drop down for **rds.force_ssl** then click on Save changes.
 {{% img "ssl_3.png" "SSL" %}}
 
-* It would take a few minutes to apply new changes.
+* It will take a few minutes to apply new changes.
 
 #### **Download and Install root certificate**
 
-* On Bastion host download the Amazon RDS root certificate directly from this [location](https://s3.amazonaws.com/rds-downloads/rds-ca-2019-root.pem) in specified location. Alternatively open this [location](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html) and download the root certificate that works for all AWS Regions.
+* From your client machine, download the [Amazon RDS root certificate](https://s3.amazonaws.com/rds-downloads/rds-ca-2019-root.pem) and take a note of the download location.
 
-* On the Start menu, type Run in the search box and press Enter.
+* Copy the **.pem** file downloaded to the bastion host. Take a note of the location of the **.pem** file in the bastion host. We will need to use it later. 
 
-* In the Open box, type MMC and then choose OK.
-
-* In the MMC console, on the File menu, choose Add/Remove Snap-in.
-
-* In the Add or Remove Snap-ins dialog box, for Available snap-ins, select Certificates, and then choose Add.
-
-* In the Certificates snap-in dialog box, choose Computer account, and then choose Next.
-
-* In the Select computer dialog box, choose Finish.
-
-* In the Add or Remove Snap-ins dialog box, choose OK.
+* On the Start menu, type `certmgr', then press Enter to open the Certificate MMC. Select **Yes** if **User Account Control** pops up.
 
 * In the MMC console, expand Certificates, open the context (right-click) menu for Trusted Root Certification Authorities, choose All Tasks, and then choose Import.
 

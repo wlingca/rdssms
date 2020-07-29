@@ -20,7 +20,7 @@ In this lab, a new databases will be created and then a backup to S3 will be per
 
 #### ***Create new Database***
 
-* Open remote desktop connection to bastion host and connect to Database instance using SSMS. You may go back to the previous labs named [Connect to SQL Server using SSMS](../lab1/3_clientconnection.html) for instructions.
+* Open remote desktop connection to bastion host and connect to Database instance using SSMS. You may go back to the previous lab named [Connect to SQL Server using SSMS](../lab1/3_clientconnection.html) for instructions.
 
 * Once you are connected to Database Instance using SSMS, click on `New Query`. In query window type or copy the following command and click on `Execute` to create new database.
 
@@ -33,7 +33,7 @@ In this lab, a new databases will be created and then a backup to S3 will be per
 
 #### ***Perform new Backup***
 
-* To get the ARN of S3 backup you have created in the previous lab, navigate to [S3 service](https://s3.console.aws.amazon.com/s3/home). From list of buckets select the bucket you created and then click on `Copy Bucket ARN`. Paste the ARN in a notepad or other accessible place that you can use in next step.
+* To get the ARN of S3 bucket you have created in the previous lab, navigate to [S3 service](https://s3.console.aws.amazon.com/s3/home). From list of buckets select the bucket you created and then click on `Copy Bucket ARN`. Paste the ARN in a notepad or other accessible place that you can use in next step.
 {{% img "native3.png" "Native Backup" %}}
 
 * Go to Bastion host, in SSMS type the following script to perform the backup and note down the **task_id** from the result.
@@ -47,7 +47,7 @@ In this lab, a new databases will be created and then a backup to S3 will be per
         , @type='full'
 {{% img "native4.png" "Native Backup" %}}
 
-* To check the status of backup execute the following script notice the lifecycle value as shown below in screenshot.
+* To check the status of backup, execute the following script, notice the lifecycle value as shown below.
 
         USE msdb
         GO

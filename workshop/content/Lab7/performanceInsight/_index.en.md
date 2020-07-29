@@ -4,7 +4,7 @@ date = 2020-06-14T22:08:05-07:00
 weight = 50
 +++
 
- * Go to **RDS Service Console**, select **Performance Insight** from the left menu, selecT **sqlserver-rdssql** from the list of database instances.
+ * Go to **RDS Service Console**, select **Performance Insight** from the left menu, select **sqlserver-rdssql** from the list of database instances.
 
 {{% img "selPerfInsight.png" "Select Performance Insight" %}}
 

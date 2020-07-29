@@ -18,7 +18,7 @@ weight = 20
 * Scroll all the way to the bottom of that page, click **CONTINUE**, verify the **summary of modifications** like below, then check the **Apply immediately** option and click on **Modify DB Instance**
 {{% img "databases_modify1.png" "Database_modify" %}}
 
-* The **status** of the database is changed to **Modifying**, RDS is applying the new compute values to the instance. This would take about 30 minutes or so, but the database is operational during this time. Please use the **refresh icon** to refresh the value for status
+* The **status** of the database is changed to **Modifying**, RDS is applying the new compute values to the instance. This will take about 30 minutes or so, but the database is operational during this time. Please use the **refresh icon** to refresh the value for status
 {{% img "databases_modify2.png" "Database_modify" %}}
 
 * Once the value for the column with the name **Status** changed to `Available`, You should see the value for the column with the name **Size** set to `db.m5.xlarge`

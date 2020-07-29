@@ -16,7 +16,7 @@ weight = 10
 * Now click on `Parameter group` and from the **Parameter groups** notice the Property name, Allowed Values, Modifiable options.
 
 {{% notice info %}} 
-* Parameter options allow you to modify some of the parameters like **trace flags** and **configuration options (sp_config)**. Not all of the settings are configuraable. You are allowed to modify values for parameters where Modifiable flag is true as shown the image below.
+Parameter options allow you to modify some of the parameters like **trace flags** and **configuration options (sp_configure)**. Not all of the settings are configurable. You are allowed to modify values for parameters where Modifiable flag is true as shown the image below.
 {{% /notice %}}
 {{% img "param4.png" "ParamOption" %}}
 

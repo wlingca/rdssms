@@ -23,15 +23,14 @@ Point in time recovery restores the entire snapshot as a separate instance. In o
 * From **Databases** page you will see that a new instance `restored-sqlserver-rdssql` is in **creating** state.
 {{% img "pitr5.png" "review" %}}
 
-* Once completed, the Status will be changed from **Creating** to **Available**. This You may connect to restored instance using the instance's endpoint. 
+* Once completed, the Status will be changed from **Creating** to **Available**. You may connect to restored instance using the instance's endpoint. 
 
 The operation will take a few minutes to complete. You may move on with the rest of the labs and come back to check on the status later.
 
-```
-{{%/* notice tip */%}}
-Restore time also varies depending on how many transaction log backups would need to be applied.
-{{%/* /notice */%}}
-```
+{{% notice tip %}}
+Restore time also varies depending on the number of transaction log backups need to be applied on top of the full backup. You may take manual snapshot backups between daily automatic snapshot backup to reduce the recovery time.
+{{% /notice %}}
+
 
 * Navigate to [**Databases**](https://console.aws.amazon.com/rds/home?region=us-east-1#databases:) page and select **DB identifier** `restored-sqlserver-rdssql`. Click on **Action** menu and select `Delete`.
 {{% img "pitr6.png" "review" %}}
