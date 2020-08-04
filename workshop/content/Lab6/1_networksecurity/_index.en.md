@@ -2,6 +2,7 @@
 title = "Review Network Security (5 mins)"
 date = 2020-06-06T22:32:59-04:00
 weight = 10
+pre = "<b>5.1 </b>"
 +++
 
 In this Lab, you will review the Network Security that includes VPCs, Security Groups and Subnet Groups.

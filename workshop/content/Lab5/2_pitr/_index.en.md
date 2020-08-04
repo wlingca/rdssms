@@ -2,6 +2,7 @@
 title = "Point In Time Recovery"
 date = 2020-05-31T21:15:37-04:00
 weight = 20
+pre = "<b>4.2 </b>"
 +++
 
 Point in time recovery restores the entire snapshot as a separate instance. In other words, RDS to setup a new instance and then restores all databases from snapshot image.

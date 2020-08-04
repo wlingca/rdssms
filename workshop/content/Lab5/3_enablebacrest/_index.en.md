@@ -2,6 +2,7 @@
 title = "Enable Native Backup and Restore"
 date = 2020-05-31T23:27:22-04:00
 weight = 30
+pre = "<b>4.3 </b>"
 +++
 
 In this section, you will create a S3 bucket. Then Backup and Restore option will be enabled and access will be granted to S3 bucket where native backup will be stored.

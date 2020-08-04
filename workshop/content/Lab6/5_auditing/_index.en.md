@@ -1,7 +1,8 @@
 +++
 title = "Auditing (10 mins)"
 date = 2020-06-07T14:42:36-04:00
-weight = 50
+weight = 60
+pre = "<b>5.6 </b>"
 +++
 
 #### **Create S3 bucket to store Audit Data**

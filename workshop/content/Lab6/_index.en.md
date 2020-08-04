@@ -3,6 +3,7 @@ title = "Securing RDS SQL Server (60 mins)"
 date = 2020-06-06T22:18:53-04:00
 weight = 70
 chapter = true
+pre = "<b>5. </b>"
 +++
 
 #### Before starting this lab, please complete

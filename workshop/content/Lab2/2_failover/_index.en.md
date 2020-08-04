@@ -2,6 +2,7 @@
 title = "Test Failover"
 date = 2020-05-21T23:06:29-04:00
 weight = 20
+pre = "<b>2.2 </b>"
 +++
 
 * Open remote desktop connection to the bastion host. You may go back to the previous labs named [Connect to SQL Server using SSMS](../lab1/3_clientconnection.html) for instructions.
@@ -9,14 +10,20 @@ weight = 20
 * From the bastion host, launch a Powershell session from the Start menu. 
 {{% img "ps1.png" "failover" %}}
 
-* Copy the following script to notepad, find and replace **[listener endpoint]** with the **Listener endpoint** information you saved in the previous lab. Then copy and paste the script to **Powershell** to run the script.
+* Copy the following script to notepad, find and replace the following information:
+
+    * **[listener endpoint]**: `Listener endpoint information you saved in the previous lab` 
+
+    * **[password]**: `Password you specified for the admin user during create database instance`
+
+* Then copy and paste the updated script to **Powershell** to run the script.
 
       
         $i=1
         $InstanceName="[listener endpoint]"
         do {
         try {
-                Invoke-Sqlcmd -ServerInstance $InstanceName -Database TempDB -Query "SELECT @@SERVERNAME as ServerName, GetDate() as CurrentTime" -ErrorAction Stop
+                Invoke-Sqlcmd -Username admin -Password [password] -ServerInstance $InstanceName -Database TempDB -Query "SELECT @@SERVERNAME as ServerName, GetDate() as CurrentTime" -ErrorAction Stop
         }
         catch {
                 Write-host "Connection interrupted, retrying..."

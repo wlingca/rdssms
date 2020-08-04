@@ -2,7 +2,7 @@
 title = "Enable Multi-AZ HA (30 mins)"
 date = 2020-05-20T22:14:33-04:00
 weight = 10
-re = "<b>2. </b>"
+pre = "<b>2.1 </b>"
 +++
 
 * Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home)

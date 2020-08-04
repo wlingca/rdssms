@@ -1,7 +1,8 @@
 +++
 title = "In Transit Encryption with SSL (10 mins)"
 date = 2020-06-07T15:32:22-04:00
-weight = 45
+weight = 50
+pre = "<b>5.5 </b>"
 +++
 
 #### **Enable SSL from Parameters**
@@ -29,7 +30,7 @@ weight = 45
 
 * On the first page of the Certificate Import Wizard, choose Next.
 
-* On the second page of the Certificate Import Wizard, choose Browse. In the browse window, change the file type to All files (*.*) because .pem is not a standard certificate extension. Locate the .pem file that you downloaded previously.
+* On the second page of the Certificate Import Wizard, choose Browse. In the browse window, change the file type to All files (*.*) because .pem is not a standard certificate extension. Locate the .pem file that you saved previously.
 
 * Choose Open to select the certificate file, and then choose Next.
 {{% img "ssl_4.png" "SSL" %}}

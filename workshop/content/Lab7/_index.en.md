@@ -3,6 +3,7 @@ title = "Performance Monitoring (30 mins)"
 date = 2020-06-08T11:19:46-07:00
 weight = 80
 chapter = true
+pre = "<b>6. </b>"
 +++
 
 #### Before starting this lab, please complete

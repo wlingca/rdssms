@@ -3,6 +3,7 @@ title = "Backup and Restore (30 mins)"
 date = 2020-05-30T17:02:49-04:00
 weight = 60
 chapter = true
+pre = "<b>4. </b>"
 +++
 
 #### Before starting this lab, please complete

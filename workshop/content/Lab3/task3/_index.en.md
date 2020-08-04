@@ -2,6 +2,7 @@
 title = "Read Scale Out with Read Replica (20 mins)"
 date = 2020-04-22T23:10:28-05:00
 weight = 30
+pre = "<b>7.3 </b>"
 +++
 
 * Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home) and click on [Databases](https://console.aws.amazon.com/rds/home#databases:) from left navigation pane. From list of databases, click on `sqlserver-rdssql` under **DB identifier**. Then click on the **Actions** for a drop down list, In that list click on **Create read replica**. You would see a similar page like below

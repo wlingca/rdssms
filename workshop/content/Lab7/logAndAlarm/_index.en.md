@@ -2,6 +2,7 @@
 title = "Create CloudWatch Alarm"
 date = 2020-06-15T09:42:02-07:00
 weight = 40
+pre = "<b>6.4 </b>"
 +++
 * Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home) and click on [Databases](https://console.aws.amazon.com/rds/home#databases:) from left navigation pane. From list of databases, click on `sqlserver-rdssql` under **DB identifier**. On the database details view, click on the **Logs & events** tab. Then click on **Create alarm**.
 {{% img "logNevent.png" "log and event" %}}

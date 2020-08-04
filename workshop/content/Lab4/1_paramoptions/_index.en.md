@@ -2,6 +2,7 @@
 title = "Parameter and Option groups"
 date = 2020-05-26T22:05:35-04:00
 weight = 10
+pre = "<b>3.1 </b>"
 +++
 
 * Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home) and click on [Databases](https://console.aws.amazon.com/rds/home#databases:) from left navigation pane. From list of databases click on `sqlserver-rdssql` under **DB identifier**.

@@ -2,6 +2,7 @@
 title = "Perform native backup"
 date = 2020-06-01T10:01:11-04:00
 weight = 40
+pre = "<b>4.4 </b>"
 +++
 
 In this lab, a new databases will be created and then a backup to S3 will be performed.

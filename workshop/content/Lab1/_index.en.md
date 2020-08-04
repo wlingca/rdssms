@@ -3,6 +3,7 @@ title = "Create a new RDS SQL Server (25 mins)"
 date = 2020-04-22T23:10:18-05:00
 weight = 10
 chapter = true
+pre = "<b>1. </b>"
 +++
 
 #### Before starting this lab, please complete

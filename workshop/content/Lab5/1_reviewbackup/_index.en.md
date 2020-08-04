@@ -2,6 +2,7 @@
 title = "Review backup options and take a manual snapshot"
 date = 2020-05-30T17:17:11-04:00
 weight = 10
+pre = "<b>4.1 </b>"
 +++
 
 * Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home) and click on [Databases](https://console.aws.amazon.com/rds/home#databases:) from left navigation pane. From list of databases click on `sqlserver-rdssql` under **DB identifier**.

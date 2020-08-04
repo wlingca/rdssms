@@ -2,6 +2,7 @@
 title = "Create new Option group"
 date = 2020-05-26T23:45:43-04:00
 weight = 30
+pre = "<b>3.3 </b>"
 +++
 
 * Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home). From the left pane click on the **Option groups**, then click on `Create group` from  **Option groups** page.

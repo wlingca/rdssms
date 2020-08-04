@@ -2,6 +2,7 @@
 title = "Storage Scaling (30 mins)"
 date = 2020-04-22T23:10:28-05:00
 weight = 10
+pre = "<b>7.1 </b>"
 +++
 
 

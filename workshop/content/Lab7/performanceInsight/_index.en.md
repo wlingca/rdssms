@@ -2,6 +2,7 @@
 title = "Performance Insight"
 date = 2020-06-14T22:08:05-07:00
 weight = 50
+pre = "<b>6.5 </b>"
 +++
 
  * Go to **RDS Service Console**, select **Performance Insight** from the left menu, select **sqlserver-rdssql** from the list of database instances.

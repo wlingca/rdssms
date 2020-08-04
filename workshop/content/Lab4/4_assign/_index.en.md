@@ -2,6 +2,7 @@
 title = "Associate Parameter and Options to database instance"
 date = 2020-05-27T00:15:34-04:00
 weight = 40
+pre = "<b>3.4 </b>"
 +++
 
 * Navigate to [Amazon RDS  service console](https://console.aws.amazon.com/rds/home). Click on [Databases](https://console.aws.amazon.com/rds/home#databases:) from left navigation pane. From list of databases select `sqlserver-rdssql` under **DB identifier** and then click on `Modify`.

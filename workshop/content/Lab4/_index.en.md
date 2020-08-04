@@ -3,6 +3,7 @@ title = "Database Parameters and Options (15 mins)"
 date = 2020-05-26T21:48:45-04:00
 weight = 40
 chapter = true
+pre = "<b>3. </b>"
 +++
 
 #### Before starting this lab, please complete

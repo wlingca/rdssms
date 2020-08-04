@@ -16,10 +16,10 @@ weight = 10
 * On the **Team Dashboard**, please click **AWS Console** to log into the AWS Management Console. 
 {{% img "ee2.png" "ee" %}}
 
-* Click **Open Console**. For the purposes of this workshop, you will not need to use command line and API access credentials.
+* Click **Open AWS Console**. For the purposes of this workshop, you will not need to use command line and API access credentials.
 {{% img "ee3.png" "ee" %}}
 
-* On your browser, return to [Event Engine Dashboard](https://dashboard.eventengine.run/), you should be back on the **Team Dashboard**, click on **SSH Key**.
+* On your browser, return to [Event Engine Dashboard](https://dashboard.eventengine.run/) tab and if needed close the AWS Console Login dialog.  You should be back on the **Team Dashboard**, click on **SSH Key**.
 {{% img "ee4.png" "ee" %}}
 
 * Click on the **Download Key** button. This will download the .pem file. Remember the location that you saved the pem keypair file on your computer. You will use this file later to decrypt the Windows login password in order to log on to the remote desktop.

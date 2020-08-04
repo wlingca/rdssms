@@ -2,6 +2,7 @@
 title = "Configure Monitoring Options"
 date = 2020-06-10T09:52:26-07:00
 weight = 10
+pre = "<b>6.1 </b>"
 +++
 
 

@@ -2,6 +2,7 @@
 title = "Compute Scaling (30 mins)"
 date = 2020-04-22T23:10:28-05:00
 weight = 20
+pre = "<b>7.2 </b>"
 +++
 
 

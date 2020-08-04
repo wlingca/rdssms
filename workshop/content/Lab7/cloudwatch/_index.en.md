@@ -2,6 +2,7 @@
 title = "CloudWatch and Enhanced Monitoring"
 date = 2020-06-10T09:35:30-07:00
 weight = 30
+pre = "<b>6.3 </b>"
 +++
 
 You can monitor DB instances using Amazon CloudWatch, which collects and processes raw data from Amazon RDS into readable, near real-time metrics. By default, Amazon RDS metric data is automatically sent to CloudWatch every 60 seconds. Metrics collected with a period of 60 seconds (1 minute) are retained for 15 days. Metrics may be retained for longer if collection interval changes. For more information, see [Metrics Retention](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#metrics-retention) in the Amazon CloudWatch User Guide. 

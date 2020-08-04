@@ -2,6 +2,7 @@
 title = "Create new Parameter group"
 date = 2020-05-26T23:22:20-04:00
 weight = 20
+pre = "<b>3.2 </b>"
 +++
 
 * Open the [Amazon RDS  service console](https://console.aws.amazon.com/rds/home). From the left pane click on **Parameter groups** and then click on `Create parameter group` from  **Parameter groups** page.

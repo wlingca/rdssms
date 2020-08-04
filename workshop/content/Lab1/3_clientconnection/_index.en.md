@@ -2,6 +2,7 @@
 title = "Connect to SQL Server using SSMS"
 date = 2020-05-12T22:35:10-04:00
 weight = 30
+pre = "<b>1.3 </b>"
 +++
 
 #### **Prerequisites for this task**

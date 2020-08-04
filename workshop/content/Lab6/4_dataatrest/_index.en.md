@@ -2,6 +2,7 @@
 title = "Data at Rest Encryption (10 mins)"
 date = 2020-06-07T12:22:34-04:00
 weight = 40
+pre = "<b>5.4 </b>"
 +++
 
 To set up encryption at rest, you have two options:

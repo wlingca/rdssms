@@ -2,6 +2,7 @@
 title = "Retrieve Database Instance Endpoint"
 date = 2020-05-12T10:31:57-04:00
 weight = 20
+pre = "<b>1.2 </b>"
 +++
 
 **Please proceed to this step after DB Instance has been provisioned from previous lab.**

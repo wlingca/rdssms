@@ -2,6 +2,7 @@
 title = "Enable Window Authentication (30 mins)"
 date = 2020-06-28T19:41:34-04:00
 weight = 30
+pre = "<b>5.3 </b>"
 +++
 
 #### **Active Directory**

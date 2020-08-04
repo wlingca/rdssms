@@ -3,6 +3,7 @@ title = "Scaling and Optimization (80 mins) "
 date = 2020-04-24T12:50:49-06:00
 weight = 90
 chapter = true
+pre = "<b>7. </b>"
 +++
 
 #### Before starting this lab, please complete

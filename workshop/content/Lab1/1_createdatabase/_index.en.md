@@ -2,6 +2,7 @@
 title = "Create the DB Instance"
 date = 2020-05-12T09:16:40-04:00
 weight = 10
+pre = "<b>1.1 </b>"
 +++
 
 #### **Create Database Instance**

@@ -2,6 +2,7 @@
 title = "Generate Test Workload (10 mins)"
 date = 2020-06-08T11:45:09-07:00
 weight = 20
+pre = "<b>6.2 </b>"
 +++
 
 In this lab, you will use the provided script to generate load on the RDS SQL Server instance.
