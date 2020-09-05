@@ -30,7 +30,3 @@ Before a DB instance can serve as a source instance for replication, you must en
 
 * Once the replica is created and available, you can connect to the replica using endpoint information. Click on `sqlserver-replica` from the list of  database instances, select the **Connectivity and security** tab retrieve the endpoint from  **Endpoint & port** section.
 {{% img "replica2.png" "replica" %}}
-
-{{% notice note %}}
-Deployment with read replica does not support native restores. However, you may remove all read replicas, perform a native restore, and recreate the read replicas.
-{{% /notice  %}}
